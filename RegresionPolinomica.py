@@ -45,7 +45,7 @@ print(regression.predict([[2.5]]))
 
 #  MODELO POLINÓMICO
 
-poly = PolynomialFeatures(degree=4)  # Instancia
+poly = PolynomialFeatures(degree=10)  # Instancia
 x_poly = poly.fit_transform(x)
 print(x_poly)
 
@@ -59,5 +59,5 @@ plt.show()
 predict = poly.fit_transform([[2]])
 print(regression_2.predict(predict))
 
-y_pred = regression_2.predict((x_poly))
+y_pred = regression_2.predict(x_poly)
 print(r2_score(y, y_pred))
